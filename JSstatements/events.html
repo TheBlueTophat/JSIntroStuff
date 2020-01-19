@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="displayDate()">Press me for the time.</button>
+    
+    <p id="demo"></p>
+
+    <span onmouseover="addEye()" onmouseout="removeEye()">Hiii</span>
+
+    <p id="eye"></p>
+    
+    <p id="txt"></p>
+    <p id="txt2"></p>
+
+    <p id="txt3"></p>
+
+    <p id="txt4"></p>
+
+    <p id="txt5"></p>
+
+    <p id="txt6"></p>
+
+    <script>
+        function displayDate()
+        {
+            document.getElementById("demo").innerHTML = Date();
+        }
+
+        function addEye()
+        {
+            document.getElementById("eye").innerHTML = "👁👄👁";
+        }
+
+        function removeEye()
+        {
+            document.getElementById("eye").innerHTML = "";
+        }
+
+        function Write(tag, data)
+        {
+            document.getElementById(tag).innerHTML = data;
+        }
+
+        var txt = "    SOME TEXT HERE ";
+        txt = txt.trim();
+        document.getElementById("txt").innerHTML = "SOME TEXT HERE.length: " + txt.length + "\n";
+
+        document.getElementById("txt2").innerHTML = "Escaped text: " + "\' " + "\" " + "\\ ";
+
+        document.getElementById("txt3").innerHTML = txt.indexOf("HERE");
+
+        txt = txt.replace("TEXT", "WORDS");
+        txt = txt.toLowerCase();
+
+        document.getElementById("txt4").innerHTML = txt.substr(5, 5);
+
+        document.getElementById("txt5").innerHTML = txt.charCodeAt(2);
+        // == only checks equality of value
+        // === checks type AND value
+
+        document.getElementById("txt6").innerHTML = "Addition: " + 10 + 10;
+
+
+    </script>
+
+</body>
+</html>

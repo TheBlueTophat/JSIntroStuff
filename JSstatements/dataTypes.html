@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Output Data</h2>
+    <script>
+        var x = 16 + "String";
+        var y = "String" + 16;
+        var z = 8 + "String" + 7;
+
+        var alertArray = [x, y, z];
+
+        // dynamic types :o
+
+        x = 10;
+
+        alertArray.push(x);
+        
+        x = "Amish"
+
+        alertArray.push(x);
+
+        var deci = 13.0000;
+        var deci2 = 13.0001;
+
+        alertArray.push(deci);
+        alertArray.push(deci2);
+
+        var sciNot = 123e2; // 12300 I think?
+        var sciNot2 = 123e-2; // 1.23?    
+        
+        alertArray.push(sciNot);
+        alertArray.push(sciNot2);
+
+        var Amish = {   firstName:"Amish",
+                        lastName:"",
+                        age:"17",
+                        eyeColor:"blue",
+                        numberOfHouses:"12",
+                        bigBrainStatus:"bigbrain is active"    
+                    }
+
+        alertArray.push(typeof Amish);
+        alertArray.push("10: " + typeof 10);
+        alertArray.push("Message: " + typeof "Message");
+        var undef;
+        alertArray.push("Undefined: " + typeof undef);
+
+        for(var i = 0; i < alertArray.length; i += 1)
+        {
+            // just found out about the <br> tag, ugh
+            document.write(alertArray[i] + "<br>");
+            // <br> more like <bruh> tbh
+        }
+    </script>
+
+
+</body>
+</html>

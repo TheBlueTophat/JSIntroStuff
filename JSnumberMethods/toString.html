@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Number Methods</h1>
+    Exponentiation (20):
+    <p id="test"></p>
+
+    Precision of 3.141592653589:
+    <p id="pi"></p>
+    <p id="pi5"></p>
+    <p id="num"></p>
+    <p id="maxNum"></p>
+    <p id="minInf"></p>
+
+    <script>
+        var x = 20;
+        write("test", x.toExponential());
+
+        var y = 3.141592653589;
+        write("pi", y.toFixed(0) + "\n");
+        write("pi5", y.toFixed(5) + "\n");
+        write("num", Number("100") + Number("5.72"));
+        write("maxNum", Number.MAX_VALUE + "\n");
+        write("minInf", Number.NEGATIVE_INFINITY + "\n");
+    
+        function write(id, message)
+        {
+            document.getElementById(id).innerHTML = message;
+        }
+    </script>
+    
+</body>
+</html>

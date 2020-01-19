@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 1;
+        var y = 3.14 * 2.72;
+        var z = 10/3;
+        var a = 2 ** 3; // 8
+        var b = 10 % 3; // 1
+        var c = 0;
+        var aa = a;
+        aa /= 2;
+
+        var d = (a || c); // I would expect it to print 1 due to evaluation but it prints 8
+
+        var nl = "\n";
+
+        var h = [   "x: " + x, 
+                    "y :" + y, 
+                    "z: " + z, 
+                    "a: " + a, 
+                    "b: " + b, 
+                    "c: " + c, 
+                    "d: " + d,
+                    "aa: " + aa];
+
+        // starts at 1 so it formats properly
+        for(var i = 1; i < h.length; i += 1) 
+        {
+            h[i] = nl + h[i];
+        }
+
+        alert(h);
+
+    </script>
+
+</body>
+</html>

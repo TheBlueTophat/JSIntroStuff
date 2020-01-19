@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Output Data:</h1>
+
+    <!--Returning the function:-->
+    <p id="funcDef"></p>
+    <!--Calling the function at 22C:-->
+    <p id="funcCall"></p>
+
+    <script>
+        function formatForScreen(input)
+        {
+            for(var i = 0; i < input.length; i += 1)
+            {
+                document.write(input[i] + "<br>");
+                // <br> more like <bruh> tbh
+            }
+        }   
+
+        var scrArr = [];
+        
+        function scr(x) // sends text to the scr array to get printed to the screen
+        {
+            scrArr.push(x);
+        }
+        
+        function toF(celcius)
+        {
+            return ((9/5) * celcius) + 32;
+        }
+
+        scr(toF(0));
+        scr(toF(10));
+        
+        //document.getElementById("funcDef").innerHTML = toF;
+
+        // This doesn't show up. I've no idea why.
+        //document.getElementByID("funcCall").innerHTML = toF(22);
+
+        scr(toF(200));
+
+        var car = { 
+                    type:"Buggy", 
+                    model:"A", 
+                    color:"Brown",
+                    drive: function()
+                            {
+                                scr("Vroom vroom!");   
+                            }
+                };
+
+        car.drive();
+
+        scr(car.type);
+        scr(car["model"]);
+
+        formatForScreen(scrArr);
+
+        // "new" keyword is used to instantiate (I think) a new object
+        // don't use for regular variables
+    </script>
+</body>
+</html>
